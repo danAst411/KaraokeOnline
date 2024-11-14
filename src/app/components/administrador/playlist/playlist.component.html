@@ -1,0 +1,69 @@
+
+<div class="card flex-fill w-100">
+    <div class="card-header">
+        <h5 class="card-title mb-0">Playlist Sugeridas</h5>
+    </div>
+
+    <div class="card-body">
+        <p>Aquí puedes ver, crear, editar, eliminar y publicar las listas de reproducción sugeridas para el sistema de karaoke.</p>
+
+        <!-- Tabla de Playlists con campos editables -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Nombre de la Playlist</th>
+                        <th>Descripción</th>
+                        <th>Canciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" value="Pop Hits" required></td>
+                        <td><input type="text" class="form-control" value="Las canciones pop más populares" required></td>
+                        <td><input type="number" class="form-control" value="10" required></td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-success">Publicar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" value="Rock Clásico" required></td>
+                        <td><input type="text" class="form-control" value="Las mejores canciones de rock clásico" required></td>
+                        <td><input type="number" class="form-control" value="8" required></td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-success">Publicar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" class="form-control" value="Baladas Románticas" required></td>
+                        <td><input type="text" class="form-control" value="Canciones románticas para cantar con el corazón" required></td>
+                        <td><input type="number" class="form-control" value="15" required></td>
+                        <td>
+                            <div class="d-flex justify-content-around">
+                                <button type="button" class="btn btn-warning">Editar</button>
+                                <button type="button" class="btn btn-success">Publicar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Botón para crear nueva Playlist -->
+        <div class="d-grid mb-3">
+            <button type="button" class="btn btn-primary">Crear Nueva Playlist</button>
+        </div>
+
+        <p class="text-muted mb-0">Puedes modificar los valores y hacer clic en "Editar" para actualizar una Playlist, "Publicar" para hacerla visible en el sistema o "Eliminar" para eliminarla.</p>
+    </div>
+</div>
