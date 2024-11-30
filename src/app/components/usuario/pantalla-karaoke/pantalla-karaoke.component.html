@@ -1,0 +1,55 @@
+<div class="container-fluid vh-100 d-flex justify-content-center align-items-center bg-light" >
+    <div class="row flex-grow-1 h-100">
+        <!-- Panel izquierdo con barra de búsqueda, sugerencias, playlists y géneros (1/4) -->
+        <div class="col-3 bg-white border-end p-3 overflow-auto">
+            <!-- Título -->
+            <div class="bg-success text-white text-center py-2 mb-3">
+                <h3 class="mb-0">American Karaoke</h3>
+            </div>
+
+            <!-- Barra de búsqueda -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar canciones" aria-label="Buscar canciones">
+                <button class="btn btn-outline-secondary" type="button">Buscar</button>
+            </div>
+            <div class=" bg-white shadow-sm rounded p-4 overflow-auto" style="max-height: 90vh;">
+    
+            <router-outlet></router-outlet>
+           </div>
+        </div>
+         <!-- Sección principal del reproductor y lista de reproducción (3/4) -->
+        <div class="col-9 d-flex flex-column p-4">
+            <app-reproductor></app-reproductor>
+        </div>
+       
+        
+    </div>
+
+    <!-- Menú de navegación inferior -->
+    <nav class="navbar fixed-bottom bg-light border-top">
+        <div class="container-fluid d-flex justify-content-around">
+            <a routerLink="panel-canciones" routerLinkActive="active" class="text-center">
+                <i class="bi bi-music-note-list" style="font-size: 24px;"></i>
+                <p class="mb-0" style="font-size: 12px;">Descubrir</p>
+            </a>
+            <a routerLink="sugerencias" routerLinkActive="active" class="text-center">
+                <i class="bi bi-clipboard-data" style="font-size: 24px;"></i>
+                <p class="mb-0" style="font-size: 12px;">Sugerencias</p>
+            </a>
+            <a routerLink="mis-canciones" routerLinkActive="active" class="text-center">
+                <i class="bi bi-star" style="font-size: 24px;"></i>
+                <p class="mb-0" style="font-size: 12px;">Mis canciones</p>
+            </a>
+            <a routerLink="control-remoto" routerLinkActive="active" class="text-center">
+                <i class="bi bi-tv" style="font-size: 24px;"></i>
+                <p class="mb-0" style="font-size: 12px;">Control remoto</p>
+            </a>
+            <a routerLink="configuracion" routerLinkActive="active" class="text-center">
+                <i class="bi bi-gear" style="font-size: 24px;"></i>
+                <p class="mb-0" style="font-size: 12px;">Ajustes</p>
+            </a>
+        </div>
+    </nav>
+</div>
+
+
