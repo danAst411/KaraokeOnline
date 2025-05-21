@@ -1,0 +1,81 @@
+<div class="container my-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Administrar Banner de Noticias</h2>
+    <button class="btn btn-primary" (click)="startCreate()">
+      + Nueva Noticia
+    </button>
+  </div>
+
+  <!-- Formulario de creación/edición (igual que antes) -->
+  <div *ngIf="editingId !== null" class="card p-3 mb-4">
+    <h4 class="card-title">
+      {{ editingId ? 'Editar' : 'Crear' }} Noticia
+    </h4>
+    <form [formGroup]="form" (ngSubmit)="save()" class="row g-3 align-items-end">
+      <div class="col-md-8">
+        <label class="form-label">Mensaje</label>
+        <input
+          formControlName="mensaje"
+          type="text"
+          class="form-control"
+        />
+      </div>
+      <div class="col-md-2">
+        <label class="form-label">Orden</label>
+        <input
+          formControlName="orden"
+          type="number"
+          class="form-control"
+          min="1"
+        />
+      </div>
+      <div class="col-auto">
+        <button
+          type="submit"
+          class="btn btn-success me-2"
+          [disabled]="form.invalid"
+        >
+          Guardar
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="cancel()"
+        >
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Tabla sin columna 'Activo' -->
+  <table class="table table-striped">
+    <thead class="table-light">
+      <tr>
+        <th>Mensaje</th>
+        <th>Orden</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let n of noticias">
+        <td>{{ n.mensaje }}</td>
+        <td>{{ n.orden }}</td>
+        <td>
+          <button
+            class="btn btn-sm btn-outline-primary me-1"
+            (click)="startEdit(n)"
+          >
+            Editar
+          </button>
+          <button
+            class="btn btn-sm btn-outline-danger"
+            (click)="remove(n.id)"
+          >
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

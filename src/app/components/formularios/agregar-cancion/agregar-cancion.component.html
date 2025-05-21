@@ -1,0 +1,53 @@
+<div class="card p-4 mb-4">
+    <h4>Agregar Nueva Canción</h4>
+    <form [formGroup]="formCancion" (ngSubmit)="agregarCancion()">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="linkVideo" class="form-label">Link del Video</label>
+                <input formControlName="linkVideoBD" type="text" class="form-control" id="linkVideo" 
+                [(ngModel)]="linkVideo"
+            name="linkVideo"
+            placeholder="Ingrese el link del video"
+                >
+            
+            </div>
+            <div class="col-md-6">
+                <label for="imagenCancion" class="form-label">Imagen de la Canción</label>
+                <input formControlName="imagenCancionBD" type="text" class="form-control" id="imagenCancion">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <label for="tituloCancion" class="form-label">Título</label>
+                <input formControlName="tituloCancionBD" type="text" class="form-control" id="tituloCancion" 
+                [(ngModel)]="tituloCancion"
+                name="tituloCancion"
+                placeholder="">
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="artistaCancion" class="form-label">Artista</label>
+                <input formControlName="artistaCancionBD" type="text" class="form-control" id="artistaCancion" 
+                [(ngModel)]="artistaCancion"
+                name="artistaCancion"
+                placeholder=""
+                >
+            </div>
+            <div class="col-md-6">
+                <label for="generoCancion" class="form-label">Género</label>
+                <input formControlName="generoCancionBD" type="text" class="form-control" id="generoCancion" 
+                [(ngModel)]="generoCancion"
+                name="generoCancion"
+                placeholder="">
+            </div>
+        </div>
+
+        <div class="d-flex gap-2">
+            <button type="button" class="btn btn-secondary" (click)="verificarLink()">Verificar</button>
+            <button type="submit" class="btn btn-primary">Agregar Canción</button>
+        </div>
+    </form>
+</div>

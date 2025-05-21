@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>{{ data.lista.nombre }}</h2>
+
+<div mat-dialog-content>
+  <p *ngIf="!data.lista.Cancions?.length">No hay canciones en esta lista.</p>
+  <ul *ngIf="data.lista.Cancions?.length" class="list-group">
+    <li *ngFor="let c of data.lista.Cancions" class="list-group-item">
+      🎵 {{ c.titulo }} – {{ c.artista }}
+    </li>
+  </ul>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="cerrar()">Cerrar</button>
+</div>

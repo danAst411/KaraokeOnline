@@ -8,7 +8,7 @@
                     <h4 class="text-white p-3">AdminKaraoke</h4>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-white" routerLink='/dashboard'>
+                            <a class="nav-link text-white" routerLink='dashboard'>
                                 <i class="bi bi-speedometer2"></i> Dashboard
                             </a>
                         </li>
@@ -38,6 +38,12 @@
                                 <i class="bi bi-star-fill"></i> Sistema de Calificación
                             </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" routerLink='banner_noticias'>
+                                <i class="bi bi-flag-fill"></i> Banner noticias
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -46,7 +52,7 @@
 
                 <!-- Botón para salir del sistema -->
                 <div class="text-center p-3">
-                    <a class="btn btn-outline-light w-100" routerLink='/logout'>
+                    <a class="btn btn-outline-light w-100" routerLink='logout'>
                         <i class="bi bi-box-arrow-right"></i> Salir del Sistema
                     </a>
                 </div>
@@ -57,7 +63,9 @@
                 </footer>
             </div>
         </nav>
-        
-        
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <router-outlet></router-outlet>
+        </main>
+    
     </div>
 </div>

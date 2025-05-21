@@ -1,0 +1,94 @@
+<div class="bg-white shadow-sm rounded p-4" style="max-height: 90vh;">
+    <ul class="nav flex-column">
+        <!-- Toggle Button para activar/desactivar Calificar -->
+        <li class="nav-item d-flex align-items-center justify-content-between">
+            <span class="text-dark">
+                <i class="bi bi-star me-2" style="color: gold;"></i> Calificar
+            </span>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="calificarToggle" onchange="toggleCalificarSection()">
+            </div>
+        </li>
+        <div class="border-top my-2"></div> <!-- Separador -->
+
+        <li class="nav-item">
+            <a class="nav-link text-dark p-2" routerLink="sugerenciasUsuario"  style="background-color: #f8f9fa;" 
+               onmouseover="this.style.backgroundColor='#e2e6ea'" 
+               onmouseout="this.style.backgroundColor='#f8f9fa'">
+                <i class="bi bi-bar-chart me-2"  style="color: blue;"></i> Votaciones
+            </a>
+        </li>
+        <div class="border-top my-2"></div> <!-- Separador -->
+
+        <li class="nav-item">
+            <a class="nav-link text-dark p-2" routerLink="perfil" style="background-color: #f8f9fa;" 
+               onmouseover="this.style.backgroundColor='#e2e6ea'" 
+               onmouseout="this.style.backgroundColor='#f8f9fa'">
+                <i class="bi bi-person-circle me-2" style="color: green;"></i> Perfil
+            </a>
+        </li>
+        <div class="border-top my-2"></div> <!-- Separador -->
+
+        <li class="nav-item">
+            <a class="nav-link text-dark p-2" routerLink="participantes" style="background-color: #f8f9fa;" 
+               onmouseover="this.style.backgroundColor='#e2e6ea'" 
+               onmouseout="this.style.backgroundColor='#f8f9fa'">
+                <i class="bi bi-person-lines-fill me-2" style="color: orange;"></i> Participantes
+            </a>
+        </li>
+        <div class="border-top my-2"></div> <!-- Separador -->
+
+        <li class="nav-item">
+            <a class="nav-link text-dark p-2" routerLink="participantes" style="background-color: #f8f9fa;" 
+               onmouseover="this.style.backgroundColor='#e2e6ea'" 
+               onmouseout="this.style.backgroundColor='#f8f9fa'">
+                <i class="bi bi-controller me-2" style="color: rgb(46, 44, 44);"></i> Control Remoto
+            </a>
+        </li>
+    </ul>
+
+    <div class="border-top my-3"></div> <!-- Separador final -->
+
+    <!-- Sección de Calificación (Oculta por defecto) -->
+    <div id="calificarSection" style="display: none;">
+        <div class="card p-3 mt-2">
+            <h5>Calificar Canción</h5>
+            <p>Selecciona una canción y asigna una calificación:</p>
+            <div class="mb-3">
+                <label for="songSelect" class="form-label">Seleccionar Canción</label>
+                <select class="form-select" id="songSelect">
+                    <option selected>Elige una canción...</option>
+                    <option value="1">Bohemian Rhapsody</option>
+                    <option value="2">Imagine</option>
+                    <option value="3">Let It Be</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="rating" class="form-label">Calificación</label>
+                <select class="form-select" id="rating">
+                    <option selected>Elige una calificación...</option>
+                    <option value="1">1 estrella</option>
+                    <option value="2">2 estrellas</option>
+                    <option value="3">3 estrellas</option>
+                    <option value="4">4 estrellas</option>
+                    <option value="5">5 estrellas</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Enviar Calificación</button>
+        </div>
+    </div>
+</div>
+
+<!-- Script para manejar el interruptor -->
+<script>
+    function toggleCalificarSection() {
+        const calificarSection = document.getElementById('calificarSection');
+        const calificarToggle = document.getElementById('calificarToggle');
+
+        if (calificarToggle.checked) {
+            calificarSection.style.display = 'block';
+        } else {
+            calificarSection.style.display = 'none';
+        }
+    }
+</script>

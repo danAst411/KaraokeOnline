@@ -1,0 +1,59 @@
+<div class="container">
+    <h2>Registrarse</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre" required>
+        <div *ngIf="registerForm.get('nombre')?.invalid && registerForm.get('nombre')?.touched" class="text-danger">
+          El nombre es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="apellido" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" formControlName="apellido" required>
+        <div *ngIf="registerForm.get('apellido')?.invalid && registerForm.get('apellido')?.touched" class="text-danger">
+          El apellido es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" formControlName="correo" required>
+        <div *ngIf="registerForm.get('correo')?.invalid && registerForm.get('correo')?.touched" class="text-danger">
+          Ingresa un correo válido.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" formControlName="telefono">
+        <div *ngIf="registerForm.get('telefono')?.invalid && registerForm.get('telefono')?.touched" class="text-danger">
+          El teléfono es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="pais" class="form-label">País</label>
+        <input type="text" class="form-control" id="pais" formControlName="pais" required>
+        <div *ngIf="registerForm.get('pais')?.invalid && registerForm.get('pais')?.touched" class="text-danger">
+          El país es obligatorio.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="contrasena" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="contrasena" formControlName="contrasena" required>
+        <div *ngIf="registerForm.get('contrasena')?.invalid && registerForm.get('contrasena')?.touched" class="text-danger">
+          La contraseña es obligatoria (mínimo 6 caracteres).
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="confirmarContrasena" class="form-label">Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="confirmarContrasena" formControlName="confirmarContrasena" required>
+        <div *ngIf="registerForm.errors?.['mismatch'] && registerForm.get('confirmarContrasena')?.touched" class="text-danger">
+          Las contraseñas no coinciden.
+        </div>
+      </div>
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Registrar</button>
+      </div>
+    </form>
+  </div>
+  
+  

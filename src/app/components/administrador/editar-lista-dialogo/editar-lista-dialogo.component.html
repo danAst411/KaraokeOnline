@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Editar lista: {{ data.lista.nombre }}</h2>
+
+<mat-dialog-content>
+  <mat-form-field appearance="outline" class="w-100">
+    <mat-label>Nombre de la lista</mat-label>
+    <input matInput [(ngModel)]="data.lista.nombre" />
+  </mat-form-field>
+
+  <h3 class="mt-4">Canciones actuales</h3>
+  <mat-list *ngIf="data.lista.Cancions?.length">
+    <mat-list-item *ngFor="let c of data.lista.Cancions">
+      🎵 {{ c.tituloCancion }} – {{ c.artistaCancion }}
+      <button mat-button color="warn" (click)="quitarCancion(c.id)">Quitar</button>
+    </mat-list-item>
+  </mat-list>
+  
+  <p *ngIf="!data.lista.Cancions?.length">No hay canciones en esta lista</p>
+
+  <mat-form-field class="w-100 mt-3" appearance="fill">
+    <mat-label>Agregar canción</mat-label>
+    <mat-select [(ngModel)]="cancionSeleccionada">
+      <mat-option *ngFor="let c of cancionesDisponibles" [value]="c">
+         {{ c.tituloCancion }} - {{ c.artistaCancion }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-flat-button color="primary" class="mt-2 w-100" (click)="agregarCancion()">Agregar</button>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="dialogRef.close()">Cancelar</button>
+  <button mat-flat-button color="accent" (click)="guardar()">Guardar cambios</button>
+</mat-dialog-actions>
+
+

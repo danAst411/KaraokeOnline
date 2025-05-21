@@ -1,0 +1,51 @@
+<div class="container-fluid vh-100 d-flex flex-column bg-light">
+    <!-- Contenido principal -->
+    <div class="row flex-grow-1">
+        <!-- Menú lateral (1/6) -->
+        <div class="col-2 bg-white border-end p-3">
+            <!-- Barra de búsqueda -->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Buscar-canciones" aria-label="Buscar canciones">
+                <button class="btn btn-outline-secondary" routerLink="buscar-canciones" type="button">Buscar</button>
+            </div>
+
+            <!-- Contenido del menú lateral -->
+            <app-menu-canciones></app-menu-canciones>
+            
+            
+        </div>
+
+        <!-- Reproductor principal (4/6) -->
+        <div class="col-8 d-flex flex-column p-4">
+            <!-- Contenedor personalizado para controlar espacio -->
+            <div class="d-flex flex-column w-100" style="flex-grow: 1;">
+                
+                <app-reproductor></app-reproductor>
+               
+               
+                <!-- Banner ajustado sin márgenes adicionales -->
+                <div class="mt-0 p-0" style="margin-bottom: 0 !important;">
+                    <app-banner-noticias></app-banner-noticias>
+                </div>
+            </div>
+
+            <div >
+                <app-cola-reproduccion></app-cola-reproduccion>
+            </div>
+            <div >
+                
+            </div>
+
+           
+        </div>
+
+        <!-- Columna derecha (1/6) -->
+        <div class="col-2 bg-light border-start p-3 overflow-auto">
+            
+            <!-- Listado de personas registradas para cantar -->
+            <div>
+                <app-menu-usuario>  </app-menu-usuario>
+            </div>
+        </div>
+    </div>
+</div>

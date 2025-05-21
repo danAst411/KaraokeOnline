@@ -1,0 +1,88 @@
+
+        <!-- Título -->
+        <div class="text-center mb-4">
+            <h2 class="text-primary">Sugerencias de Canciones</h2>
+        </div>
+
+        <!-- Tabla de Canciones Sugeridas -->
+        <div class="mb-4">
+            <h5 class="text-secondary">Canciones Votadas</h5>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Título</th>
+                            <th>Artista</th>
+                            <th>Votos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Despacito</td>
+                            <td>Luis Fonsi</td>
+                            <td>
+                                <span class="text-success fw-bold">150</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-success btn-sm me-2">
+                                    <i class="bi bi-hand-thumbs-up"></i> Votar
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Shape of You</td>
+                            <td>Ed Sheeran</td>
+                            <td>
+                                <span class="text-success fw-bold">120</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-success btn-sm me-2">
+                                    <i class="bi bi-hand-thumbs-up"></i> Votar
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Más canciones -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Botón para Agregar Nueva Sugerencia -->
+        <div class="text-center mb-4">
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalNuevaSugerencia">
+                <i class="bi bi-plus-circle"></i> Agregar Nueva Sugerencia
+            </button>
+        </div>
+
+        <!-- Modal para Nueva Sugerencia -->
+        <div class="modal fade" id="modalNuevaSugerencia" tabindex="-1" aria-labelledby="modalNuevaSugerenciaLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalNuevaSugerenciaLabel">Nueva Sugerencia</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="tituloCancionSugerida" class="form-label">Título</label>
+                                <input type="text" id="tituloCancionSugerida" class="form-control" placeholder="Ingrese el título de la canción">
+                            </div>
+                            <div class="mb-3">
+                                <label for="artistaCancionSugerida" class="form-label">Artista</label>
+                                <input type="text" id="artistaCancionSugerida" class="form-control" placeholder="Ingrese el nombre del artista">
+                            </div>
+                           
+                           
+                            <button type="submit" class="btn btn-success w-100">Enviar Sugerencia</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+

@@ -1,0 +1,12 @@
+
+.vjs-control.vjs-play-control,
+.vjs-control.vjs-skip-forward-control,
+.vjs-control.vjs-skip-backward-control,
+.vjs-control.vjs-mute-control,
+.vjs-control.vjs-volume-panel,
+.vjs-control.vjs-time-control,
+.vjs-control.vjs-duration,
+.vjs-control.vjs-remaining-time-display,
+.vjs-control.vjs-picture-in-picture-control {
+  display: none !important;
+}

@@ -1,0 +1,35 @@
+<div class="mt-0">
+  <div class="d-flex align-items-center mb-3">
+    <span class="badge bg-danger me-2">{{ cola.length }}</span>
+    <h5 class="mb-0">Cola de canciones</h5>
+  </div>
+
+  <div class="d-flex gap-2 flex-wrap">
+    <!-- Tarjetas dinámicas -->
+    <ng-container *ngFor="let item of cola">
+      <div class="card text-center shadow-sm p-2" style="width:120px; height:110px;">
+        <h6 class="mb-1 text-truncate">{{ item.cancion.titulo }}</h6>
+        <small class="text-muted text-truncate">{{ item.cancion.artista }}</small>
+        <div class="d-flex justify-content-between mt-2">
+          <button class="btn btn-link p-0" (click)="onPlay(item)">
+            <i class="bi bi-play-circle text-primary"></i>
+          </button>
+          <button class="btn btn-link p-0" (click)="onRemove(item)">
+            <i class="bi bi-trash text-danger"></i>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- Botón “Agregar nueva canción” -->
+    <div
+      class="card text-center shadow-sm p-2"
+      style="width:120px; height:110px; border:dashed 1px #ccc;"
+      (click)="openAddSong()"
+    >
+      <div class="d-flex flex-column justify-content-center align-items-center h-100">
+        <i class="bi bi-plus-lg" style="font-size:24px; color:#ccc;"></i>
+      </div>
+    </div>
+  </div>
+</div>

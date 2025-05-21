@@ -1,0 +1,43 @@
+<div class="bg-white shadow-sm rounded p-4" style="max-height: 90vh;">
+    <!-- Toggle Button -->
+    <button class="btn btn-outline-secondary w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuToggle" aria-expanded="false" aria-controls="menuToggle">
+        <i class="bi bi-list me-2"></i> Menú
+    </button>
+
+    <!-- Menú de navegación colapsable -->
+    <div class="collapse" id="menuToggle">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-dark p-2" href="#" style="background-color: #f8f9fa;" onmouseover="this.style.backgroundColor='#e2e6ea'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+                    Calificar
+                </a>
+            </li>
+            <div class="border-top my-2"></div> <!-- Separador -->
+            <li class="nav-item">
+                <a class="nav-link text-dark p-2" href="#" style="background-color: #f8f9fa;" onmouseover="this.style.backgroundColor='#e2e6ea'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+                    Votaciones
+                </a>
+            </li>
+            <div class="border-top my-2"></div> <!-- Separador -->
+            <li class="nav-item">
+                <a class="nav-link text-dark p-2" href="#" style="background-color: #f8f9fa;" onmouseover="this.style.backgroundColor='#e2e6ea'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+                    Perfil
+                </a>
+            </li>
+            <div class="border-top my-2"></div> <!-- Separador -->
+            <li class="nav-item">
+                <a class="nav-link text-dark p-2" href="#" style="background-color: #f8f9fa;" onmouseover="this.style.backgroundColor='#e2e6ea'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+                    Participantes
+                </a>
+            </li>
+            <div class="border-top my-2"></div> <!-- Separador -->
+            <li class="nav-item">
+                <a class="nav-link text-dark p-2" href="#" style="background-color: #f8f9fa;" onmouseover="this.style.backgroundColor='#e2e6ea'" onmouseout="this.style.backgroundColor='#f8f9fa'">
+                    Control Remoto
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <router-outlet></router-outlet>
+</div>

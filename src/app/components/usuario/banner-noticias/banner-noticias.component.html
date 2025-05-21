@@ -1,0 +1,35 @@
+<!-- banner-noticias.component.html -->
+<div
+  id="bannerCarousel"
+  class="carousel slide bg-white border-bottom shadow-sm mt-0"
+  data-bs-ride="carousel"
+  *ngIf="noticias.length"
+>
+  <div class="carousel-inner">
+    <div
+      *ngFor="let n of noticias; let i = index"
+      class="carousel-item"
+      [class.active]="i === 0"
+    >
+      <div class="d-flex justify-content-center align-items-center p-3">
+        <h5 class="text-center mb-0">{{ n.mensaje }}</h5>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#bannerCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#bannerCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
